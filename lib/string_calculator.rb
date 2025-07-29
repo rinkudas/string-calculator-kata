@@ -6,6 +6,7 @@ class StringCalculator
 
     def add(input)
       @call_count += 1
+      return 0 if input.strip.empty?
       # METHOD_PLACEHOLDER
     end
 
