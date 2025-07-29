@@ -26,6 +26,12 @@ RSpec.describe 'StringCalculator' do
       expect(StringCalculator.add("1\n2\n3,4,5")).to eq(15)
     end
 
+    it 'supports custom single-character delimiter' do
+      expect(StringCalculator.add("//;\n1;2")).to eq(3)
+      expect(StringCalculator.add("//|\n4|5|6")).to eq(15)
+      expect(StringCalculator.add("//x\n7x8x9")).to eq(24)
+    end
+
     # TEST_PLACEHOLDER
   end
 end
