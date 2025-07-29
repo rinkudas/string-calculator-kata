@@ -16,6 +16,10 @@ RSpec.describe 'StringCalculator' do
       expect(StringCalculator.add("3,2")).to eq(5)
     end
 
+    it 'returns sum of multiple numbers' do
+      expect(StringCalculator.add("1,2,3")).to eq(6)
+    end
+
     # TEST_PLACEHOLDER
   end
 end
