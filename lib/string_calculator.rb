@@ -7,7 +7,7 @@ class StringCalculator
     def add(input)
       @call_count += 1
       return 0 if input.strip.empty?
-      return input.to_i if input.strip.length == 1
+      return input.split(",").map(&:to_i).sum
       # METHOD_PLACEHOLDER
     end
 
