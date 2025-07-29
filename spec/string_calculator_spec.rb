@@ -8,6 +8,10 @@ RSpec.describe 'StringCalculator' do
       expect(StringCalculator.add("")).to eq(0)
     end
 
+    it 'returns number itself for a single number' do
+      expect(StringCalculator.add("5")).to eq(5)
+    end
+
     # TEST_PLACEHOLDER
   end
 end
