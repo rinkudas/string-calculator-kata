@@ -20,6 +20,12 @@ RSpec.describe 'StringCalculator' do
       expect(StringCalculator.add("1,2,3")).to eq(6)
     end
 
+    it 'supports newline as delimiter along with commas' do
+      expect(StringCalculator.add("1\n2,3")).to eq(6)
+      expect(StringCalculator.add("10\n20\n30")).to eq(60)
+      expect(StringCalculator.add("1\n2\n3,4,5")).to eq(15)
+    end
+
     # TEST_PLACEHOLDER
   end
 end
