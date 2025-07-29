@@ -32,6 +32,10 @@ RSpec.describe 'StringCalculator' do
       expect(StringCalculator.add("//x\n7x8x9")).to eq(24)
     end
 
+    it 'raises error for single negative number' do
+      expect { StringCalculator.add("-1") }.to raise_error("negatives not allowed: -1")
+    end
+
     # TEST_PLACEHOLDER
   end
 end
