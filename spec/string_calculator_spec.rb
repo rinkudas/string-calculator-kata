@@ -68,6 +68,10 @@ RSpec.describe 'StringCalculator' do
       expect(StringCalculator.add("//[##][@@@]\n4##5@@@1")).to eq(10)
     end
 
-    # TEST_PLACEHOLDER
+    it 'handles edge cases with ignored numbers and newlines' do
+      expect(StringCalculator.add("//;\n1;1001;2;999")).to eq(1002)
+      expect(StringCalculator.add("//[---][+++]\n1000---1+++2")).to eq(1003)
+      expect(StringCalculator.add("//[*][%]\n\n1*2%3")).to eq(6)
+    end
   end
 end
