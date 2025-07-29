@@ -7,6 +7,7 @@ class StringCalculator
     def add(input)
       @call_count += 1
       return 0 if input.strip.empty?
+      return input.to_i unless input.include?(",") || input.include?("\n")
       # METHOD_PLACEHOLDER
     end
 
