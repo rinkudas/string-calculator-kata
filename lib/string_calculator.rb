@@ -18,7 +18,7 @@ class StringCalculator
       numbers = input.split(Regexp.union(delimiters)).map(&:to_i)
       negatives = numbers.select { |n| n < 0 }
       raise "negatives not allowed: #{negatives.join(',')}" unless negatives.empty?
-      return numbers.sum
+      return numbers.reject { |n| n > 1000 }.sum
       # METHOD_PLACEHOLDER
     end
 
